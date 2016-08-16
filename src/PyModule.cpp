@@ -21,5 +21,11 @@ BOOST_PYTHON_MODULE( pymodule )
     using namespace ::boost::python;
 
     def( "greet", &greet );
+
+    auto module = scope();
+
+    module.attr( "__doc__"     ) = "PyModule - boost::python template project";
+    module.attr( "__author__"  ) = "Pavel Schon <pavel@schon.cz>";
+    module.attr( "__version__" ) = "0.1.0";
 }
 
